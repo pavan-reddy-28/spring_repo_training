@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+               http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+               
+	 <bean id="amenityBean1" class="com.training.task.Amenity">
+		<property name="data" value="wifi"></property>
+	</bean> 
+	 <bean id="amenityBean2" class="com.training.task.Amenity">
+		<property name="data" value="pool"></property>
+	</bean>
+
+ 
+ 	<bean id="bookableBean1" class="com.training.task.Bookable">
+		<property name="name" value="lord of rings"></property>
+	</bean>
+	<bean id="bookableBean2" class="com.training.task.Bookable">
+		<property name="name" value="Ice and Fire"></property>
+	</bean>
+
+	<bean id="paymentBean1" class="com.training.task.PaymentDetails">
+		<property name="transactionId" value="XCIOPQWE"></property>
+	</bean>
+	<bean id="paymentBean2" class="com.training.task.PaymentDetails">
+		<property name="transactionId" value="45WERLK"></property>
+	</bean>
+	
+	<bean id="roleBean1" class="com.training.task.Role">
+		<property name="roleName" value="devlpoer"></property>
+	</bean>
+	<bean id="roleBean2" class="com.training.task.Role">
+		<property name="roleName" value="someone"></property>
+	</bean>
+	
+	<bean id="addBean" class="com.training.basics.Address">
+		<constructor-arg name="lane" value="5"></constructor-arg>
+		<constructor-arg name="city" value="hyd"></constructor-arg>
+		<constructor-arg name="state" value="tel"></constructor-arg>
+	</bean>
+	
+	<bean id="custBean" class="com.training.task.CustomerType">
+		<property name="id" value="234"></property>
+		<property name="type" value="qwdat"></property>
+	</bean>
+	
+	<bean id="userBean" class="com.training.task.User">
+		<property name="email" value="saipavanreddy@gmail.com" ></property>
+		<property name="password" value="QWERTY"></property>
+		<property name="phoneNumber" value="9989654321"></property>
+		<property name="address">
+			<ref bean="addBean"/>
+		</property>
+		<property name="verified" value="true"></property>
+		<property name="roles">
+		<list>
+		<ref bean="roleBean1"/>
+		<ref bean="roleBean2"/>
+		</list>
+		</property>
+		<property name="enabled" value="true"></property>
+	</bean>
+
+
+<bean id="cutomerBean" class="com.training .task.Customer" parent="User" >
+<property name="foreName" value="sai" ></property>
+		<property name="surName" value="QWERTY"></property>
+		<property name="paymentDetails">
+		<list>
+		<ref bean="paymentBean1"/>
+		<ref bean="payementBean2"/>
+		</list>
+		</property>
+		<property name="favorites">
+		<list>
+		<ref bean="bookableBean1"/>
+		<ref bean="bookableBean2"/>
+		</list>
+		</property>
+		<property name="customerType">
+		<ref bean="custBean"/>
+		</property>
+</bean>
+
+
+<bean id="VendorBean" class="com.training .task.Vendor" parent="User" >
+       <property name="name" value="sai" ></property>
+		<property name="description" value="QWERTY"></property>
+		<property name="openingTime" value="15:32:35.458"></property>
+		<property name="closingTime" value="15:32:35.431"></property>		
+		<property name="images" value="x1.jpeg"></property>
+		<property name="offers">
+		<list>
+		<ref bean="bookableBean1"/>
+		<ref bean="bookableBean2"/>
+		</list>
+		</property>	
+		<property name="amenities">
+		<list>
+		<ref bean="amenityBean1"/>
+		<ref bean="amenityBean2"/>
+		</list>
+		</property>
+
+</bean>
+	
+	
+</beans> 
