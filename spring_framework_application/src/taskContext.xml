@@ -63,13 +63,13 @@
 	</bean>
 
 
-<bean id="cutomerBean" class="com.training .task.Customer" parent="User" >
+<bean id="customerBean" class="com.training.task.Customer" parent="userBean" >
 <property name="foreName" value="sai" ></property>
 		<property name="surName" value="QWERTY"></property>
 		<property name="paymentDetails">
 		<list>
 		<ref bean="paymentBean1"/>
-		<ref bean="payementBean2"/>
+		<ref bean="paymentBean2"/>
 		</list>
 		</property>
 		<property name="favorites">
@@ -84,7 +84,7 @@
 </bean>
 
 
-<bean id="VendorBean" class="com.training .task.Vendor" parent="User" >
+<bean id="VendorBean" class="com.training.task.Vendor" parent="userBean" >
        <property name="name" value="sai" ></property>
 		<property name="description" value="QWERTY"></property>
 		<property name="openingTime" value="15:32:35.458"></property>
