@@ -1,4 +1,4 @@
-package com.training;
+package com.training.basics;
 
 import java.util.ArrayList;
 import java.util.List;
