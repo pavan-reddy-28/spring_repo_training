@@ -1,7 +1,7 @@
 package com.training.task;
 
 public class Bookable {
-		private String name ;
+		private String name;
 
 		public String getName() {
 			return name;
@@ -20,6 +20,8 @@ public class Bookable {
 			super();
 			this.name = name;
 		}
-		
+		 public Bookable() {
+			 this.name="";
+		 }
 		
 }

@@ -8,7 +8,7 @@ public class Customer extends User {
 	private String surName;
 	private List<PaymentDetails> paymentDetails;
 	private List<Bookable> favorities;
-	private customerType cutomerType;
+	private CustomerType cutomerType;
 	
 	
 	@Override
@@ -59,12 +59,12 @@ public class Customer extends User {
 	}
 
 
-	public customerType getCutomerType() {
+	public CustomerType getCutomerType() {
 		return cutomerType;
 	}
 
 
-	public void setCutomerType(customerType cutomerType) {
+	public void setCutomerType(CustomerType cutomerType) {
 		this.cutomerType = cutomerType;
 	}
 

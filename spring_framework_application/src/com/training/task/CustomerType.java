@@ -1,6 +1,6 @@
 package com.training.task;
 
-public class customerType {
+public class CustomerType {
   
 	private String id;
 	private String type;
@@ -22,8 +22,11 @@ public class customerType {
 		this.type = type;
 	}
 	
-	
-	public customerType(String id, String type) {
+	public CustomerType() {
+		this.id="";
+		this.type="";
+	}
+	public CustomerType(String id, String type) {
 		super();
 		this.id = id;
 		this.type = type;
