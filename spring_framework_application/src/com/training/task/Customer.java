@@ -8,14 +8,14 @@ public class Customer extends User {
 	private String surName;
 	private List<PaymentDetails> paymentDetails;
 	private List<Bookable> favorities;
-	private CustomerType cutomerType;
+	private CustomerType customerType;
 	
 	
 	@Override
 	public String toString() {
 		System.out.println(super.toString());
 		return "Customer [foreName=" + foreName + ", surName=" + surName + ", paymentDetails=" + paymentDetails
-				+ ", favorities=" + favorities + ", cutomerType=" + cutomerType + "]";
+				+ ", favorities=" + favorities + ", cutomerType=" + customerType + "]";
 	}
 
 
@@ -59,13 +59,13 @@ public class Customer extends User {
 	}
 
 
-	public CustomerType getCutomerType() {
-		return cutomerType;
+	public CustomerType getCustomerType() {
+		return customerType;
 	}
 
 
-	public void setCutomerType(CustomerType cutomerType) {
-		this.cutomerType = cutomerType;
+	public void setCutomerType(CustomerType customerType) {
+		this.customerType = customerType;
 	}
 
 
